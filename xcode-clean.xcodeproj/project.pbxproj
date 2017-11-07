@@ -11,6 +11,7 @@
 		85D37A5C1FADD5340080340A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D37A591FADD5340080340A /* StringExtensions.swift */; };
 		85D37A5D1FADD5340080340A /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D37A5A1FADD5340080340A /* Option.swift */; };
 		85D37A5E1FADD5340080340A /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D37A5B1FADD5340080340A /* CommandLine.swift */; };
+		85D37A601FAE13FD0080340A /* Cleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D37A5F1FAE13FC0080340A /* Cleaner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		85D37A591FADD5340080340A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		85D37A5A1FADD5340080340A /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		85D37A5B1FADD5340080340A /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		85D37A5F1FAE13FC0080340A /* Cleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cleaner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				85D37A581FADD50D0080340A /* libraries */,
 				85D37A511FADC3F80080340A /* main.swift */,
+				85D37A5F1FAE13FC0080340A /* Cleaner.swift */,
 			);
 			path = "xcode-clean";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D37A601FAE13FD0080340A /* Cleaner.swift in Sources */,
 				85D37A5C1FADD5340080340A /* StringExtensions.swift in Sources */,
 				85D37A5D1FADD5340080340A /* Option.swift in Sources */,
 				85D37A521FADC3F80080340A /* main.swift in Sources */,
