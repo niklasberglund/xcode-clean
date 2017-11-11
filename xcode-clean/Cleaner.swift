@@ -34,7 +34,26 @@ class Cleaner {
     }
     
     public func humanReadableDiskSpace(path: DirectoryPath) -> String {
-        return ""
+        let totalSize: Double = Double(self.diskSpace(path: path))
+        
+        let roundFactor = 100
+        
+        let kbSize = totalSize/1024
+        let mbSize = kbSize/1024
+        let gbSize = mbSize/1024
+        
+        if kbSize < 1024 {
+            let roundedSize = Double(round(kbSize * Double(roundFactor))/Double(roundFactor))
+            return "\(roundedSize)K"
+        }
+        else if mbSize < 1024 {
+            let roundedSize = Double(round(mbSize * Double(roundFactor))/Double(roundFactor))
+            return "\(roundedSize)M"
+        }
+        else {
+            let roundedSize = Double(round(gbSize * Double(roundFactor))/Double(roundFactor))
+            return "\(roundedSize)G"
+        }
     }
     
     public func deleteContents(path: DirectoryPath) {
