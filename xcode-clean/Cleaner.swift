@@ -56,8 +56,24 @@ class Cleaner {
         }
     }
     
+    /// Removes all files and directories under the specified directory.
+    ///
+    /// - Parameter path: Path of the directory to remove files and directories under.
     public func deleteContents(path: DirectoryPath) {
+        let expandedPath = Cleaner.expandTilde(path.rawValue)
         
+        if let files = FileManager.default.subpaths(atPath: expandedPath) {
+            for subPath in files {
+                let subPathFull = "\(expandedPath)/\(subPath)"
+                
+                do {
+                    try FileManager.default.removeItem(atPath: subPathFull)
+                }
+                catch let error {
+                    debugPrint("\(error.localizedDescription)")
+                }
+            }
+        }
     }
     
     private static func expandTilde(_ path: String) -> String {
