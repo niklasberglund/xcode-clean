@@ -69,7 +69,7 @@ class Cleaner {
     public func deleteContents(path: DirectoryPath) {
         let expandedPath = Cleaner.expandTilde(path.rawValue)
         
-        if let files = FileManager.default.subpaths(atPath: expandedPath) {
+        if let files = try? FileManager.default.contentsOfDirectory(atPath: expandedPath) {
             for subPath in files {
                 let subPathFull = "\(expandedPath)/\(subPath)"
                 
