@@ -35,7 +35,7 @@ let backupDsymsFlag = StringOption(shortFlag: "b", longFlag: "backup-dsyms", hel
 /// Which paths to delete contents in
 var clearPaths: [DirectoryPath] = []
 
-commandLine.addOptions(helpFlag, allFlag, dryRunFlag, archivesFlag, backupDsymsFlag)
+commandLine.addOptions(helpFlag, allFlag, dryRunFlag, archivesFlag, derivedDataFlag, deviceSupportFlag, simulatorDevicesFlag, backupDsymsFlag)
 
 do {
     try commandLine.parse()
