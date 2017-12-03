@@ -13,6 +13,13 @@ enum DirectoryPath: String {
     case derivedData = "~/Library/Developer/Xcode/DerivedData"
     case simulatorDevices = "~/Library/Developer/CoreSimulator/Devices"
     case deviceSupport = "~/Library/Developer/Xcode/iOS DeviceSupport"
+    
+    static let allValues = [
+        DirectoryPath.archives,
+        DirectoryPath.derivedData,
+        DirectoryPath.simulatorDevices,
+        DirectoryPath.deviceSupport
+    ]
 }
 
 class Cleaner {
