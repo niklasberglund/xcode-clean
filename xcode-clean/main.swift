@@ -15,7 +15,8 @@ func deleteContents(_ path: DirectoryPath, dryRun: Bool, cleaner: Cleaner) {
         print("Clearing \(path.rawValue) would free \(diskSpaceString)")
     }
     else {
-        print("Contents in \(path.rawValue) will be removed once this function has been implemented")
+        print("Clearing \(path) (freeing \(diskSpaceString) disk space)")
+        cleaner.deleteContents(path: path)
     }
 }
 
