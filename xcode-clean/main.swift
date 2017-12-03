@@ -30,10 +30,6 @@ if helpFlag.value {
     exit(0)
 }
 
-print("All is \(allFlag.value)")
-print("Archives is \(archivesFlag.value)")
-print("Dry run is \(dryRunFlag.value)")
-
 if let backupPath = backupDsymsFlag.value {
     print("Backup path is \(backupPath)")
 }
