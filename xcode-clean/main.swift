@@ -24,7 +24,8 @@ let commandLine = CommandLine()
 
 let helpFlag = BoolOption(shortFlag: "h", longFlag: "help", required: false, helpMessage: "Print help message")
 let allFlag = BoolOption(shortFlag: "A", longFlag: "all", required: false, helpMessage: "Clear archives")
-let dryRunFlag = BoolOption(shortFlag: "d", longFlag: "dry-run", required: false, helpMessage: "Dry run")
+let dryRunFlag = BoolOption(shortFlag: "x", longFlag: "dry-run", required: false, helpMessage: "Dry run")
+
 let archivesFlag = BoolOption(shortFlag: "a", longFlag: "archives", required: false, helpMessage: "Clear archives")
 let derivedDataFlag = BoolOption(shortFlag: "d", longFlag: "derived-data", required: false, helpMessage: "Clear DerivedData")
 let deviceSupportFlag = BoolOption(shortFlag: "D", longFlag: "device-support", required: false, helpMessage: "Clear device support")
