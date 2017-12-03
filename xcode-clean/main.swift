@@ -12,10 +12,10 @@ func deleteContents(_ path: DirectoryPath, dryRun: Bool, cleaner: Cleaner) {
     let diskSpaceString = cleaner.humanReadableDiskSpace(path: path)
     
     if dryRun {
-        print("Clearing \(path) would free \(diskSpaceString)")
+        print("Clearing \(path.rawValue) would free \(diskSpaceString)")
     }
     else {
-        print("Contents in \(path) will be removed once this function has been implemented")
+        print("Contents in \(path.rawValue) will be removed once this function has been implemented")
     }
 }
 
