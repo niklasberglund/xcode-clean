@@ -59,17 +59,21 @@ internal extension String {
         var numSplits = 0
         
         var curIdx = self.startIndex
-        for i in self.characters.indices {
-            let c = self[i]
+        var i = 0
+        
+        for c in self {
+            let currentIndex = self.index(self.startIndex, offsetBy: i)
             if c == by && (maxSplits == 0 || numSplits < maxSplits) {
                 #if swift(>=3.2)
-                    s.append(String(self[curIdx..<i]))
+                    s.append(String(self[curIdx..<currentIndex]))
                 #else
-                    s.append(self[curIdx..<i])
+                    s.append(self[curIdx..<currentIndex])
                 #endif
-                curIdx = self.index(after: i)
+                curIdx = self.index(after: currentIndex)
                 numSplits += 1
             }
+            
+            i += 1
         }
         
         if curIdx != self.endIndex {
@@ -93,7 +97,7 @@ internal extension String {
      */
     func padded(toWidth width: Int, with padChar: Character = " ") -> String {
         var s = self
-        var currentLength = self.characters.count
+        var currentLength = self.count
         
         while currentLength < width {
             s.append(padChar)
@@ -121,7 +125,7 @@ internal extension String {
         var currentLineWidth = 0
         
         for word in self.split(by: splitBy) {
-            let wordLength = word.characters.count
+            let wordLength = word.count
             
             if currentLineWidth + wordLength + 1 > width {
                 /* Word length is greater than line length, can't wrap */
