@@ -75,11 +75,19 @@
 		85D37A581FADD50D0080340A /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				85F171111FDD7BBB0087E95E /* CommandLine */,
+			);
+			path = libraries;
+			sourceTree = "<group>";
+		};
+		85F171111FDD7BBB0087E95E /* CommandLine */ = {
+			isa = PBXGroup;
+			children = (
 				85D37A5B1FADD5340080340A /* CommandLine.swift */,
 				85D37A5A1FADD5340080340A /* Option.swift */,
 				85D37A591FADD5340080340A /* StringExtensions.swift */,
 			);
-			path = libraries;
+			path = CommandLine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
